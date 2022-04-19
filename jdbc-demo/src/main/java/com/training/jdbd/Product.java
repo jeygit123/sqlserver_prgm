@@ -1,6 +1,5 @@
 package com.training.jdbd;
 
-import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -16,7 +15,7 @@ public class Product {
 		String password="Hotwater007";
 		Connection con = DriverManager.getConnection(url, user, password);
 		
-		String query = "select * from product";
+		String query = "select * from product order by price asc"; 
 		java.sql.Statement stmt = con.createStatement();
 		ResultSet rs =  stmt.executeQuery(query);
 		
@@ -25,6 +24,7 @@ public class Product {
 			System.out.println("prod_desc:"+rs.getString("prod_desc"));
 			System.out.println("prod_pric:"+rs.getDouble("price"));
 		}
+//		System.out.println("");
 		}
 
 }

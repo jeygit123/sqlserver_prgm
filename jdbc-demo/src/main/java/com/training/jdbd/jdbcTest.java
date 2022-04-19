@@ -9,7 +9,7 @@ public class jdbcTest {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException 
 	   {
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-		String url ="jdbc:sqlserver://localhost:1433;"+"databaseName=Mars;"+"encrypt=true;trustServerCertificate = true";
+		String url ="jdbc:sqlserver://localhost:1433;"+"databaseName=j_new_Data;"+"encrypt=true;trustServerCertificate = true";
 		String user = "sa";
 		String password="Hotwater007";
 		Connection con = DriverManager.getConnection(url, user, password);
